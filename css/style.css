@@ -1,0 +1,98 @@
+html {
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+b,strong,optgroup {
+	font-weight:700;
+}
+
+a {
+    color: inherit;
+    padding: 9px 9px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+a:hover {
+    color: inherit;
+
+}
+
+.view-list #index,
+.view-index #list {
+    display: none;
+}
+
+h1 {
+	font-size: 58px;
+}
+
+h2 {
+    margin-bottom: 33px;
+}
+
+h1, h2, h3, h4 {
+    text-transform: capitalize;
+}
+
+.view-index section {
+    padding: 230px 20%;
+}
+
+.view-index h1 {
+    color: #FFD420;
+    margin-bottom: 1px;
+}
+
+/* link highlighting for white bg panes */
+.view-index section:nth-of-type(2n-1) a {
+    background: #ffd420;
+}
+
+.view-index section:nth-of-type(2n-1) a:hover {
+    background: #ffdd4d;
+}
+
+/* link highlighting for yellow bg panes */
+.view-index section:nth-of-type(2n) a {
+    background: #000a4c;
+}
+
+.view-index section:nth-of-type(2n) a:hover {
+    background: #0019c2;
+}
+
+.view-index section:nth-of-type(2n) {
+    background: #FFD420;
+    color: white;
+}
+
+/* title section */
+.view-index section:nth-child(1) {
+    background: url("../images/profpic.png") no-repeat right center fixed;
+    background-size: cover;
+}
+
+/* about me section */
+.view-index section:nth-child(2) {
+    background: url("../images/UCSD.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* experience section */
+.view-index section:nth-child(3) {
+    background: url("../images/companies.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* personal project section */
+.view-index section:nth-child(4) {
+    background: url("../images/project.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Other interests */
+.view-index section:nth-child(5) {
+    background: url("../images/longboard.png") no-repeat center center fixed;
+    background-size: cover;
+}
