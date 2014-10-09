@@ -4,8 +4,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="./css/style.css" />
+  <script type='text/javascript' 
+    src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'>
+  </script>
+  <script type="text/javascript" src="./js/navbar.js"></script>
+  <script type="text/javascript" src="./js/smoothscroll.js"></script>
 </head>
 <body class="view-index">
+
+  <div id="header">
+    <div id="navWrap">
+      <div id="nav">
+        <ul>
+          <li><a href="#index" class="smoothScroll" 
+                  style="font-weight:bold;">Chet Lemon</a></li>
+          <li><a href="#Education" class="smoothScroll">Education</a></li>
+          <li><a href="#Experience" class="smoothScroll">Experience</a>
+          </li>
+          <li><a href="#Projects" class="smoothScroll">Projects</a></li>
+          <li><a href="#Interests" class="smoothScroll">Interests</a></li>
+          <li><a href="#Contact" class="smoothScroll">Contact</a></li>
+         </ul>
+         <br class="clearLeft"/>
+      </div>
+    </div>
+  </div>
 
   <article id="index">
 
@@ -13,14 +36,6 @@
 
           <h1>Chet Lemon</h1>
           <strong>Student and Aspiring Developer.</strong>
-
-          <p>
-            <a href="#Education">Education</a>
-            <a href="#Experience">Experience</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Interests">Interests</a>
-            <a href="#Contact">Contact</a>
-          <p>
 
     </section>
 
@@ -30,7 +45,7 @@
 
       <p>
         At 20 years of age, I am studying Computer Science at UC San Diego and 
-        planning toGraduate in 2016.<br><br>
+        planning to Graduate in 2016.<br><br>
         <a href="./courses.html">A list of relevant courses I've taken so far</a>
       </p>
 

@@ -1,6 +1,52 @@
 html {
 	font-family:Tahoma, Geneva, sans-serif;
 }
+/* Navbar stuff */
+
+#wrap {
+   margin: 10px auto;        
+   background: #FFF;
+   padding: 10px;
+   width: 700px;
+}
+#header {
+   background-color: #FFF;
+   color: #FFF;
+}
+#logo {
+   font-size: 30px;  
+   line-height: 40px;    
+   padding: 5px;
+}
+#navWrap {
+   height: 50px;
+}
+#nav {
+   padding: 5px;
+   background: #FFF;    
+}
+#nav ul {
+   margin: 0;
+   padding: 0;    
+}
+#nav li {
+   float: left;
+   padding: 3px 8px;
+   background-color: #FFF;
+   margin: 0 10px 0 0;
+   color: #F00;
+   list-style-type: none;
+}
+#nav li a {
+   color: #FFD420;  
+   text-decoration: bold;    
+}
+#nav li a:hover {
+   background-color: #c9c9c9;
+}
+br.clearLeft {
+   clear: left;        
+}
 
 b,strong,optgroup {
 	font-weight:700;
@@ -40,7 +86,7 @@ h1, h2, h3, h4 {
 }
 
 .view-index h1 {
-    color: #FFD420;
+    color: #ffd420;
     margin-bottom: 1px;
 }
 
