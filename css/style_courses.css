@@ -1,0 +1,63 @@
+html {
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+b,strong,optgroup {
+	font-weight:700;
+}
+
+.view-list #index,
+.view-index #list {
+    display: none;
+}
+
+h1 {
+	font-size: 58px;
+}
+
+h2 {
+    margin-bottom: 33px;
+}
+
+h1, h2, h3, h4 {
+    text-transform: capitalize;
+}
+
+.view-index section {
+    padding: 230px 20%;
+}
+
+.view-index h1 {
+    color: #FFD420;
+    margin-bottom: 1px;
+}
+
+/* every other pane is bg yellow default */
+.view-index section:nth-of-type(2n) {
+    background: #FFD420;
+    color: white;
+}
+
+/* title */
+.view-index section:nth-child(1) {
+    background: url("../images/UCSD-white.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 1styear */
+.view-index section:nth-child(2) {
+    background: url("../images/helloworld.png") no-repeat right center fixed;
+    background-size: cover;
+}
+
+/* 2ndyear */
+.view-index section:nth-child(3) {
+    background: url("../images/touchground.png") no-repeat right center fixed;
+    background-size: cover;
+}
+
+/* 3rdyear */
+.view-index section:nth-child(4) {
+    background: url("../images/redbull.png") no-repeat right center fixed;
+    background-size: cover;
+}
