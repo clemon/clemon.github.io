@@ -40,12 +40,12 @@ body {
 
 .rotateclass{
     -webkit-animation-name: mymove;
-    -webkit-animation-duration:1s;
+    -webkit-animation-duration:.5s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease;
     -webkit-animation-fill-mode: forwards;
     animation-name: mymove;
-    animation-duration:1s;
+    animation-duration:.5s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -65,12 +65,12 @@ body {
 
 .reverseRotateclass{
     -webkit-animation-name: reverseRotate;
-    -webkit-animation-duration:1s;
+    -webkit-animation-duration:.5s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease;
     -webkit-animation-fill-mode: forwards;
     animation-name: reverseRotate;
-    animation-duration:1s;
+    animation-duration:.5s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
