@@ -1,29 +1,36 @@
 <!DOCTYPE html><html>
 <head>
     <link rel="stylesheet" href="style.css"/>
+    <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="js/greensock/TweenMax.min.js"></script>
+    <script src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 </head>
-<body>
+<body><div id="scrollContainer">
+
     <div class="panel" title="home">
-        <div style="padding: 250px 0 0 20px; position:relative;">
+        <div style="padding: 250px 0 0 20px;">
             <p style="padding-bottom:20px;">Hi, I'm</p>
-            <div style="padding-bottom:20px; display:inline; position:absolute;">
-                <h1 style="font-size: 100pt; display: inline;">CHET</h1>
+
+            <div id="titleDiv" style="margin: 30px 0 20px 0; position:relative;">
+                <h1 id="titleC" style="font-size: 100pt; display: inline;">C</h1>
+                <h1 id="titleH" style="font-size: 100pt; display: inline;">H</h1>
+                <h1 id="titleE" style="font-size: 100pt; display: inline;">E</h1>
+                <h1 id="titleT" style="font-size: 100pt; display: inline;">T</h1>
+                <h1 id="titlePeriod" style="color:#FFFF00; font-size:155pt;
+                    display: inline; position:absolute; margin-top:-17px;">.</h1>
             </div>
-            <div style="display: inline; position:absolute; padding: 0 0 100px 400px; margin-top:-33px"
-                 data-0="transform:translate(0px, 0px);"
-                 data-30p="transform:translate(-373px, -33px);">
-                <h1 style="color:#FFFF00; font-size:150pt; display: inline;">.</h1>
-            </div>
-            <p style="max-width: 450px; margin-top:110px;">I am a 22 year old developer living in San Diego, California. 
-                Blah blah blah hire me and shit. Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit. Proin et tristique nunc. Mauris 
-                gravida consectetur pharetra. Sed euismod mauris eu velit sagittis, 
-                non convallis nisi rutrum. Donec tristique nisi luctus sodales consequat. 
-                Duis porttitor eleifend nibh ut rhoncus. Vestibulum elementum eleifend 
+
+            <p style="max-width: 450px;">I am a 22 year old developer living in San Diego, California.
+                Blah blah blah hire me and shit. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Proin et tristique nunc. Mauris
+                gravida consectetur pharetra. Sed euismod mauris eu velit sagittis,
+                non convallis nisi rutrum. Donec tristique nisi luctus sodales consequat.
+                Duis porttitor eleifend nibh ut rhoncus. Vestibulum elementum eleifend
                 tellus vitae vestibulum.</p>
         </div>
     </div>
-    
+
     <div class="panel" title="school" style="display:flex; justify-content:center;">
         <div class="centertext">
             <h1>UC San Diego</h1>
@@ -31,10 +38,7 @@
             <h1>B.S. Computer Science</h1>
         </div>
     </div>
-    
-    <script type="text/javascript" src="skrollr.min.js"></script>
-    <script type="text/javascript">
-        var s = skrollr.init();
-    </script>
-</body>
+
+    <script src="js/animate.js"></script>
+</div></body>
 </html>
