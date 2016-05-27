@@ -50,8 +50,8 @@ p {font-family: quicksilver;
 div[title="home"] {
     /* tint */
     background: linear-gradient(
-      rgba(40, 40, 40, .60),
-      rgba(40, 40, 40, .60)
+      rgba(40, 40, 40, .80),
+      rgba(40, 40, 40, .80)
     ),
     /* bottom, image */
     url(images/rockies.jpg);
