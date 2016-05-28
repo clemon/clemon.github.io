@@ -28,8 +28,8 @@ html {
 
 }
 #scrollContainer {
-height: 100%;
-margin: auto;
+    height: 100%;
+    margin: auto;
 }
 
 .panel {
@@ -43,8 +43,15 @@ h1 {
     line-height: 50px;
 }
 
-p {font-family: quicksilver;
+.subtitle {
+    font-size: 12pt;
+    line-height: 30px;
+}
+
+p {
+    font-family: quicksilver;
     color: white;
+    max-width: 450px;
 }
 
 div[title="home"] {
@@ -53,7 +60,6 @@ div[title="home"] {
       rgba(40, 40, 40, .80),
       rgba(40, 40, 40, .80)
     ),
-    /* bottom, image */
     url(images/rockies.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -66,15 +72,80 @@ div[title="school"] {
       rgba(40, 40, 40, .60),
       rgba(40, 40, 40, .60)
     ),
-    /* bottom, image */
     url(images/geisel.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
+.briefme[title="exp"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/pops.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.microsoft[title="exp"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/glass.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.antengo[title="exp"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/SD.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centric {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .centertext {
     text-align: center;
     align-self: center;
+}
+
+.logoBar {
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.active {
+    opacity: 1;
+    width: 90px;
+}
+
+.inactive {
+    opacity: 0.5;
+    width: 45px;
+}
+
+.logo {
+    padding: 0 5px 0 5px;
 }

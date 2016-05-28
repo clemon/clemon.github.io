@@ -5,6 +5,7 @@
     <script src="js/greensock/TweenMax.min.js"></script>
     <script src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
 </head>
 <body><div id="scrollContainer">
 
@@ -21,7 +22,7 @@
                     display: inline; position:absolute; margin-top:-17px;">.</h1>
             </div>
 
-            <p id="introText" style="max-width: 450px;">
+            <p id="introText">
                 I am a 22 year old developer currently looking for a position
                 in the greater Los Angeles area. Having a Bachelor's degree, a
                 diverse set of industry experience and an ever-increasing quiver
@@ -31,7 +32,7 @@
         </div>
     </div>
 
-    <div class="panel" title="school" style="display:flex; justify-content:center;">
+    <div class="centric panel" title="school" style="">
         <div class="centertext">
             <h1 id="ucsd">UC San Diego</h1>
             <h1 id="class">Class of 2016</h1>
@@ -39,6 +40,35 @@
         </div>
     </div>
 
-    <script src="js/animate.js"></script>
+    <div class="navbar panel briefme" id="exp_panel" title="exp">
+        <div class="centertext" style="margin-top:100px;">
+            <img id="exp_img" src="images/briefme_titleimg.png" style="max-width:300px; max-height:200px"></img>
+            <h1 id="exp_date" class="subtitle">June 2015 - Sept 2015</h1>
+            <p id="exp_text" style="padding-bottom:10px;">
+                Worked on the Google App Engine backend
+                (python) for "BriefMe View", a feature that
+                scrapes media from articles as an alternative to
+                the mobile web. Also did data analytics and
+                automation of source RSS feed maintenance.
+            </p>
+            <h1 id="exp_skill1" class="subtitle">Python&nbsp;&nbsp;&nbsp;&nbsp;HTML&nbsp;&nbsp;&nbsp;&nbsp;CSS</h1>
+            <h1 id="exp_skill2" class="subtitle">Google App Engine</h1>
+        </div>
+        <div class="logoBar">
+            <a href="javascript:logo_click(0);"><img class="active logo"
+                id="bmlogo" src="images/briefmewhite_small.png"></img></a>
+            <a href="javascript:logo_click(1);"><img class="inactive logo"
+                id="mslogo" src="images/ms_white_small.png"></img></a>
+            <a href="javascript:logo_click(2);"><img class="inactive logo"
+                id="antlogo" src="images/antengo_small_white.png"></img></a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // init global controller
+        var controller = new ScrollMagic.Controller({container: "#scrollContainer"});
+    </script>
+    <script src="js/animate_home.js"></script>
+    <script src="js/animate_exp.js"></script>
 </div></body>
 </html>

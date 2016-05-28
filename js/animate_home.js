@@ -1,5 +1,4 @@
-// init controller
-var controller = new ScrollMagic.Controller({container: "#scrollContainer"});
+// global controller init in index.html
 
 // pin title
 new ScrollMagic.Scene({
