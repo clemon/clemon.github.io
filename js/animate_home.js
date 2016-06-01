@@ -1,16 +1,28 @@
 // global controller init in index.html
-
+// Opera 8.0+
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+// Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+// At least Safari 3+: "[object HTMLElementConstructor]"
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+// Internet Explorer 6-11
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+// Edge 20+
+var isEdge = !isIE && !!window.StyleMedia;
+// Chrome 1+
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+// Blink engine detection
+var isBlink = (isChrome || isOpera) && !!window.CSS;
 // pin title
+
+console.log(isChrome+"  "+isEdge+"  "+isFirefox);
+
 new ScrollMagic.Scene({
     duration: 4000,
     offset: 250
 })
 .setPin("#titleDiv", {pushFollowers:false})
-.addTo(controller)
-.addIndicators()
-.on("update", function(event){
-    console.log("pos: "+event.scrollPos);
-});
+.addTo(controller);
 
 // fade intro text
 var intro_fade = TweenMax.to("#introText", 1, {opacity:0})
@@ -22,7 +34,12 @@ new ScrollMagic.Scene({
 .addTo(controller);
 
 // period translation
-var period_tween = TweenMax.to("#titlePeriod", 1, {x:-180, y:-30, rotation:360});
+var period_tween;
+if (isChrome)
+    period_tween = TweenMax.to("#titlePeriod", 1, {x:-181, y:-36, rotation:0});
+else {
+    period_tween = TweenMax.to("#titlePeriod", 1, {x:-185, y:-36, rotation:0});
+}
 new ScrollMagic.Scene({
     duration: 270,
     offset: 538

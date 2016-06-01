@@ -3,6 +3,14 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .7;
+}
+
 body {
     height: 100%;
 }
@@ -114,6 +122,150 @@ div[title="school"] {
     background-size: cover;
 }
 
+.sns[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/sdhacks.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overdrive[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/overdrive.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.doorman[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/door.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.healthstream[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/stanford.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lynx[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/usc.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.snow[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/whoop.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hike[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/zion.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.volley[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/vb.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.games[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/hanzo.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cook[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/cook.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eat[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/eat.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/tentfeet.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .centric {
     display:flex;
     flex-direction: column;
@@ -148,4 +300,9 @@ div[title="school"] {
 
 .logo {
     padding: 0 5px 0 5px;
+}
+
+.contacticon {
+    display: inline;
+    padding: 0 20px 20px 20px;
 }
