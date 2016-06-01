@@ -18,20 +18,22 @@ function preloadImages(array) {
     }
 }
 
-// preloadImages(["images/cook.jpg",
-//                 "images/door.jpg",
-//                 "images/eat.jpg",
-//                 "images/geisel.jpg",
-//                 "images/glass.jpg",
-//                 "images/hanzo.gif",
-//                 "images/overdrive.jpg",
-//                 "images/pops.jpg",
-//                 "images/rockies.jpg",
-//                 "images/SD.jpg",
-//                 "images/sdhacks.jpg",
-//                 "images/stanfordlow.jpg",
-//                 "images/tentfeet.jpg",
-//                 "images/usc.jpg",
-//                 "images/vb.jpg",
-//                 "images/whoop.gif",
-//                 "images/zion.gif"]);
+console.log("loading images");
+preloadImages(["images/cook.jpg",
+                "images/door.jpg",
+                "images/eat.jpg",
+                "images/geisel.jpg",
+                "images/glass.jpg",
+                "images/hanzo.gif",
+                "images/overdrive.jpg",
+                "images/pops.jpg",
+                "images/rockies.jpg",
+                "images/SD.jpg",
+                "images/sdhacks.jpg",
+                "images/stanford.jpg",
+                "images/tentfeet.jpg",
+                "images/usc.jpg",
+                "images/vb.jpg",
+                "images/whoop.gif",
+                "images/zion.gif"]);
+console.log("done loading images");
