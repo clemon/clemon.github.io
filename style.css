@@ -1,124 +1,308 @@
-core-scroll-header-panel::shadow #headerBg {
-    background-image: url("./images/SD.jpg");
+* {
+    padding: 0;
+    margin: 0;
 }
 
-core-scroll-header-panel::shadow #condensedHeaderBg {
-    background-color: #FFC107;
+a {
+    text-decoration: none;
 }
 
-core-toolbar {
-    color: #f1f1f1;
-    fill: #f1f1f1;
-    background-color: transparent;
+a:hover {
+    opacity: .7;
 }
 
 body {
-    font-family: 'Cuprum', sans-serif;
-    background-color: LightGray;
-}
-
-.content {
-    padding: 20px;
-    margin: 0 0 0 0;
-}
-
-.card {
-    max-width: 550px;
-    padding:1.5rem;
-    box-shadow:0 1px 2px #aaa;
-    background: white;
-    margin:0 1rem 1rem;
-    border-radius:3px;
-    user-select:none;
-    animation:fly-in-from-left .5s 1s ease both;
-    transform-origin:top left;
-}
-
-.card paper-fab{
-    margin-right: -3.2rem
-}
-
-.rotateclass{
-    -webkit-animation-name: mymove;
-    -webkit-animation-duration:.5s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-    animation-name: mymove;
-    animation-duration:.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-    from {-webkit-transform: rotate(0deg);}
-    to {-webkit-transform: rotate(45deg);}
-}
-
-/* Standard syntax */
-@keyframes mymove {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(45deg);}
-}
-
-.reverseRotateclass{
-    -webkit-animation-name: reverseRotate;
-    -webkit-animation-duration:.5s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-    animation-name: reverseRotate;
-    animation-duration:.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes reverseRotate {
-    from {-webkit-transform: rotate(45deg);}
-    to {-webkit-transform: rotate(0deg);}
-}
-
-/* Standard syntax */
-@keyframes reverseRotate {
-    from {transform: rotate(45deg);}
-    to {transform: rotate(0deg);}
-}
-
-.overlay {
-    position:absolute; /* absolute position (so we can position it where we want)*/  
-    bottom:0px; /* position will be on bottom */  
-    left:0px; 
     height: 100%;
-    width:100%;  
-    /* styling bellow */  
-    background-color:black;   
-    font-size:35px;  
-    color:white;  
-    opacity: 0; /* transparency */  
-    border-radius:3px;
-    -webkit-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
 }
 
-.job:hover .overlay{
-    opacity: 0.6; /* transparency */  
+html {
+    height: 100%;
 }
 
-.job {
-    float: left;
-    position: relative;
+@font-face {
+    font-family: BIGJOHN;
+    src: url("fonts/BIG_JOHN.otf") format("opentype");
 }
 
-span {
+@font-face {
+    font-family: quicksilver;
+    src: url("fonts/Quicksand-Regular.otf") format("opentype");
+}
+
+#scrollContainer {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+#scrollContainer {
+    height: 100%;
+    margin: auto;
+}
+
+.panel {
+    width: 100%;
+    height: 800px;
+}
+
+h1 {
+    font-family: BIGJOHN;
+    color: white;
+    line-height: 50px;
+}
+
+.subtitle {
+    font-size: 12pt;
+    line-height: 30px;
+}
+
+p {
+    font-family: quicksilver;
+    color: white;
+    max-width: 450px;
+}
+
+div[title="home"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .80),
+      rgba(40, 40, 40, .80)
+    ),
+    url(images/rockies.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div[title="school"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .60),
+      rgba(40, 40, 40, .60)
+    ),
+    url(images/geisel.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.briefme[title="exp"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/pops.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.microsoft[title="exp"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/glass.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.antengo[title="exp"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/SD.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sns[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/sdhacks.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overdrive[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/overdrive.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.doorman[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/door.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.healthstream[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/stanford.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lynx[title="proj"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/usc.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.snow[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/whoop.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hike[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/zion.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.volley[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/vb.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.games[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/hanzo.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cook[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/cook.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eat[title="intr"] {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/eat.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact {
+    /* tint */
+    background: linear-gradient(
+      rgba(40, 40, 40, .70),
+      rgba(40, 40, 40, .70)
+    ),
+    url(images/tentfeet.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centric {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.centertext {
     text-align: center;
+    align-self: center;
 }
 
+.logoBar {
+    align-self: center;
+    margin-bottom: 20px;
+}
 
+.active {
+    opacity: 1;
+    width: 90px;
+}
 
-#invisacard {
-    opacity: 0;
+.inactive {
+    opacity: 0.5;
+    width: 45px;
+}
+
+.logo {
+    padding: 0 5px 0 5px;
+}
+
+.contacticon {
+    display: inline;
+    padding: 0 20px 20px 20px;
 }

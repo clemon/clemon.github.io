@@ -1,535 +1,138 @@
 <!DOCTYPE html><html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <link rel="import" href="elements.html">
-    <link rel="stylesheet" href="style.css" shim-shadowdom/>
-    <script type="text/javascript" src="experience.js"></script>
-    <script type="text/javascript" src="dialog.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto|Cuprum' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" href="style.css"/>
+    <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="js/greensock/TweenMax.min.js"></script>
+    <script src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 
-    <!--Google Analytics-->
-    <script> 
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-48484729-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-    
 </head>
-<body fullbleed layout vertical>
-        
-    <core-scroll-header-panel flex keepCondensedHeader condenses>
-        <core-toolbar class="tall" >
-            
-            <div class=""><h2>Chet Lemon</h2></div>
-        </core-toolbar>
-        <div class="content"  vertical layout center>
-            <div>
-            <div class="card" id="aboutme">
-                <div horizontal layout>
-                    <h1>About Me</h1>
-                    <span flex></span>
-                    <paper-fab id="aboutfab" icon="add" onclick="aboutMeRotate()" 
-                                style="-webkit-transform: rotate(45deg); 
-                                transform: rotate(45deg);">
-                    </paper-fab>
-                </div>
-                
-                <core-collapse id="aboutcollapse" opened>
-                    <div class="content" style="text-align:center;" vertical center layout wrap>
-                        <img src="/images/profpic3.jpg" width="175">
-                        <span>
-                        <br>My name is Chet Lemon, and I am a 22 year old developer 
-                        living in San Diego, California. I see my college years as a time to 
-                        spread out and get experience in everything I possibly can. Having started in 
-                        mobile and recently delved into web, I am looking to broaden my horizons by 
-                        introducing myself to Artificial Intelligence and Machine Learning.
-                        </span>
-                    </div>
-                </core-collapse>
-            </div>
-            
-            <div class="card" id="education"  >
-                <div horizontal layout>
-                    <h1>Education</h1>
-                    <span flex></span>
-                    <paper-fab id="edufab" icon="add" onclick="educationRotate()">
-                    </paper-fab>
-                </div>
-                
-                <core-collapse id="educollapse">
-                    <div class="content" vertical center layout wrap>
-                        <img src="/images/UCSD_logo.png" width="150">
-                        <span><br>B.S. Computer Science<br>graduation in June 2016<br><br><br></span>
-                        <img src="/images/coursera.png" width="150">
-                        <span><br>Machine Learning<br>In progress<br><br></span>
-                    </div>
-                </core-collapse>
-            </div>
-                    
+<body><div id="scrollContainer">
 
-            <div class="card" id="experience">
-                <div horizontal layout>
-                    <h1>Experience</h1>
-                    <span flex></span>
-                    <paper-fab id="expfab" icon="add" onclick="experienceRotate()">
-                    </paper-fab>
-                </div>
-                
-                <core-collapse id="expcollapse">
-                    <div class="content">
-                        <div id="jobtimeline" center vertical layout>
-                            
-                            
-                            <span style="color:LightGray;">Today</span>
-                            <canvas id="zero" width="40" height="40"></canvas>
-                                                <!-- | -->
-                            <div id="trc" class="job" vertical layout center>
-                                <img src="images/trc.png" width="150">
-                                <div class="overlay" onClick="toggleDialog('trcdialog')"center
-                                     center-justified horizontal layout>
-                                    <span>More Info</span>
-                                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                                </div>
-                                <span>Avionics Team</span>
-                                <span>Live data and video transmission</span>
-                            </div>
-                            <paper-action-dialog id="trcdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                                <div class="jobdescrip" vertical layout center>
-                                    <img src="images/trc.png" width="150">
-                                    <p>
-                                    We’re working to launch one of the first student-built rockets into space.
-                                    The avionics team works on the gathering of gyroscope, accelerometer, 
-                                    temperature, barometric pressure, and altitude data in addition to a live 
-                                    video feed. The data will be transmitted to the ground station in real 
-                                    time over ham radio. This data serves as the proof that we made it to the 
-                                    altitude we say we did. <br><br>
-                                    We recently tested some live data collection with a high altitude balloon
-                                    launch that led us into the middle of a desert to recover it. While it was
-                                    kind of a pain to dig our cars out of the sand, it was definitely worth it, 
-                                    as the footage was amazing. Press coverage of our launch here:
-                                    </p>
-                                    <paper-button affirmative autofocus>
-                                        <a href="http://www.utsandiego.com/news/2014/dec/09/UCSD-balloon-saltonseaa/">U-T San Diego</a>
-                                    </paper-button>
-                                    <paper-button affirmative autofocus>
-                                    <a href="http://fox5sandiego.com/2014/12/10/ucsd-students-release-balloon-100000-ft-into-air/">Fox News</a>
-                                    </paper-button>
-                                </div>
-                                <paper-button affirmative autofocus>Close</paper-button>
-                            </paper-action-dialog>
-                            
-                            <canvas id="one" width="40" height="40"></canvas>
-                            <span style="color:LightGray;">September 2014</span>
-                            <canvas id="two" width="40" height="40"></canvas>
-                                                <!-- | -->
-                            <div id="msft" class="job" vertical layout center>
-                                <img src="images/microsoft.jpg" width="150">
-                                <div class="overlay" onClick="toggleDialog('msftdialog')" center 
-                                     center-justified horizontal layout>
-                                    <span>More Info</span>
-                                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                                </div>
-                                <span>Software Development Engineer Intern</span>
-                                <span>OneDrive Web - Full Stack</span>
-                            </div>
-                            <paper-action-dialog id="msftdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                                    <div class="jobdescrip" vertical layout center>
-                                        <img src="images/microsoft.jpg" width="150">
-                                        <p>
-                                        I Worked on the OneDrive team as a full-stack web developer, doing API 
-                                        work in the backend as well as UI and JavaScript work in the frontend 
-                                        for a new feature. Before Microsoft, I almost exclusively developed for mobile 
-                                        platforms, so this internship definitely broadened my horizons to 
-                                        web development as a whole. 
-                                        </p>
-                                    </div>
-                                    <paper-button affirmative autofocus>Close</paper-button>
-                            </paper-action-dialog>
-                                                <!-- | -->
-                            <canvas id="three" width="40" height="40"></canvas>
-                            <span style="color:LightGray;">June 2014</span>
-                                                <!-- | -->
-                            <canvas id="four" width="40" height="20"></canvas>
-                            <span style="color:LightGray;">April 2014</span>
-                            <canvas id="five" width="40" height="40"></canvas>
-                                                <!-- | -->
-                            <div id="ant" class="job" vertical layout center>
-                                <img src="images/antengo.jpg" width="150">
-                                <div class="overlay" onClick="toggleDialog('antdialog')" center
-                                     center-justified horizontal layout>
-                                    <span>More Info</span>
-                                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                                </div>
-                                <span>Mobile Development Intern</span>
-                                <span>Windows Phone and Android</span>
-                            </div>
-                            <paper-action-dialog id="antdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                                    <div class="jobdescrip" vertical layout center>
-                                        <img src="images/antengo.jpg" width="150">
-                                        <p>
-                                        I Worked on a cross-platform mobile application for real-time classifieds. 
-                                        In a Developer role, I worked on their windows phone app, starting from a 
-                                        bare scaffolding of an application. In more of a Quality Assurance role, I 
-                                        also tested and fixed bugs on Android. This internship gave me a first 
-                                        into the start-up world. Still in the early stages and working out of an 
-                                        incubator, Antengo showed me a fair bit of the business side of things as well.
-                                        </p>
-                                    </div>
-                                    <paper-button affirmative autofocus>Close</paper-button>
-                            </paper-action-dialog>
-                                                <!-- | -->
-                            <canvas id="six" width="40" height="40"></canvas>
-                            <span style="color:LightGray;">September 2013</span>
-                            <canvas id="seven" width="40" height="40"></canvas>
-                                                <!-- | -->
-                            <div id="ts" class="job" vertical layout center>
-                                <img src="images/thoughtstem.png" width="150">
-                                <div class="overlay" onClick="toggleDialog('tsdialog')" center
-                                     center-justified horizontal layout>
-                                    <span>More Info</span>
-                                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                                </div>
-                                <span>Summer Camp Mentor</span>
-                                <span>Arduino and Robotics</span>
-                            </div>
-                            <paper-action-dialog id="tsdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                                    <div class="jobdescrip" vertical layout center>
-                                        <img src="images/thoughtstem.png" width="150">
-                                        <p>
-                                        At ThoughtSTEM, I spent the summer teaching a wide variety of kids 
-                                        from ages eight to eighteen the basics of programming. It was my 
-                                        responsibility to create the curriculum and lead classes on Arduino 
-                                        and Robotics.
-                                        </p>
-                                    </div>
-                                    <paper-button affirmative autofocus>Close</paper-button>
-                            </paper-action-dialog>
-                                                <!-- | -->
-                            <canvas id="eight" width="40" height="40"></canvas>
-                            <span style="color:LightGray;">June 2013</span>
-                                                <!-- | -->
-                            <canvas id="nine" width="40" height="40"></canvas>
-                            <div id="auvsi" class="job" vertical layout center wrap>
-                                <img src="images/auvsi.jpg" width="150">
-                                <div class="overlay" onClick="toggleDialog('auvsidialog')" center 
-                                     center-justified horizontal layout>
-                                    <span>More Info</span>
-                                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                                </div>
-                                <span>Software Team</span>
-                                <span>Plane and Groundstation Communications</span>
-                            </div>
-                            <paper-action-dialog id="auvsidialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                                    <div class="jobdescrip" vertical layout center>
-                                        <img src="images/auvsi.jpg" width="150">
-                                        <p>
-                                        I Worked on an unmanned airplane that can fly autonomously and 
-                                        recognize targets in real time. I Implemented google maps 
-                                        integration, and the communication between the plane and the ground station.
-                                        </p>
-                                    </div>
-                                    <paper-button affirmative autofocus>Close</paper-button>
-                            </paper-action-dialog>
-                                                <!-- | -->
-                            <canvas id="ten" width="40" height="40"></canvas>
-                            <span style="color:LightGray;">September 2012</span>
-                            
-                            <script>
-                                drawline('zero');
-                                drawline('one');
-                                drawline('two');
-                                drawline('three');
-                                drawline('four');
-                                drawline('five');
-                                drawline('six');
-                                drawline('seven');
-                                drawline('eight');
-                                drawline('nine');
-                                drawline('ten');
-                            </script>
-                                
-                        </div>
-                    </div>
-                </core-collapse>
+    <div class="panel" title="home">
+        <div style="padding: 250px 0 0 20px;">
+            <p style="padding-bottom:40px;">Hi, I'm</p>
+
+            <div id="titleDiv" style="margin: 30px 0 10px 0; position:relative;">
+                <h1 id="titleC" style="font-size: 100pt; display: inline;">C</h1>
+                <h1 id="titleH" style="font-size: 100pt; display: inline;">H</h1>
+                <h1 id="titleE" style="font-size: 100pt; display: inline;">E</h1>
+                <h1 id="titleT" style="font-size: 100pt; display: inline;">T</h1>
+                <h1 id="titlePeriod" style="color:#FFFF00; font-size:155pt;
+                    display: inline; position:absolute; margin-top:-37px;">.</h1>
             </div>
-            
-            
-            <div class="card" id="projects">
-                <div horizontal layout>
-                    <h1>Projects</h1>
-                    <span flex></span>
-                    <paper-fab id="projfab" icon="add" onclick="projectsRotate()">
-                    </paper-fab>
-                </div>
-                
-                <core-collapse id="projcollapse">
-                    <div class="content" center vertical layout>
-                        
-                        <div id="lynx" class="job" vertical layout center wrap>
-                            <div class="overlay" onClick="toggleDialog('lynxdialog')" center 
-                                 center-justified horizontal layout>
-                                <span>More Info</span>
-                                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                            </div>
-                            <span><strong>Lynx</strong></span>
-                            <span>Won top 5 at HackSC Fall 2014</span>
-                            <span>A touchID password manager for iOS</span>
-                        </div>
-                        <paper-action-dialog id="lynxdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                            <div class="jobdescrip" vertical layout center>
-                                <img src="images/lynx.png" width="150">
-                                <p>
-                                Google Chrome extension scrapes websites for input fields 
-                                and injects javascript to populate the fields with your account
-                                information. The two communicate through secure websockets to a 
-                                node.js server. The accounds are stored locally on your phone and 
-                                touchID is used to authenticate before communicating with the chrome 
-                                extension.
-                                </p>
-                                <span>Check it out on:</span>
-                                <paper-button>
-                                    <a href="http://challengepost.com/software/lynx">
-                                        ChallengePost
-                                    </a>
-                                </paper-button>
-                                <span>Or</span>
-                                <paper-button>
-                                    <a href="http://meet-lynx.com">
-                                        meet-lynx.com
-                                    </a>
-                                </paper-button>
-                            </div>
-                            <paper-button affirmative autofocus>Close</paper-button>
-                        </paper-action-dialog>
-                        
-                        <div><span><br><br></span></div>
-                        
-                        <div id="kinectkontroller" class="job" vertical layout center wrap>
-                            <div class="overlay" onClick="toggleDialog('kinectdialog')" center 
-                                 center-justified horizontal layout>
-                                <span>More Info</span>
-                                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                            </div>
-                            <span><strong>Kinect Kontroller</strong></span>
-                            <span>Use a Kinect as a universal game controller</span>
-                        </div>
-                        <paper-action-dialog id="kinectdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                            <div class="jobdescrip" vertical layout center>
-                                <p>
-                                Allows a Kinectv2 sensor to act as a game controller through 
-                                custom gestures. For example, running in place would trigger 
-                                running in-game.
-                                </p>
-                                <span>Check it out on:</span>
-                                <paper-button>
-                                    <a href="https://github.com/clemon/KinectKontroller">
-                                        Github
-                                    </a>
-                                </paper-button>
-                            </div>
-                            <paper-button affirmative autofocus>Close</paper-button>
-                        </paper-action-dialog>
-                        
-                        <div><span><br><br></span></div>
-                        
-                        <div id="push" class="job" vertical layout center wrap>
-                            <div class="overlay" onClick="toggleDialog('pushdialog')" center 
-                                 center-justified horizontal layout>
-                                <span>More Info</span>
-                                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                            </div>
-                            <span><strong>Push</strong></span>
-                            <span>A cross-platform group collaboration platform to make 
-                                sharing files as simple as one, two... just two.</span>
-                        </div>
-                        <paper-action-dialog id="pushdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                            <div class="jobdescrip" vertical layout center>
-                                <img src="/images/push.png" width="150">
-                                <p>
-                                Cross platform filesharing utility for small teams. Created with 
-                                two other friends. Backend API written with Node.js and Websockets. 
-                                Windows client written in C# (WPF).
-                                </p>
-                                <span>Check it out on:</span>
-                                <paper-button>
-                                    <a href="http://challengepost.com/software/push">
-                                        ChallengePost
-                                    </a>
-                                </paper-button>
-                            </div>
-                            <paper-button affirmative autofocus>Close</paper-button>
-                        </paper-action-dialog>
-                        
-                        <div><span><br><br></span></div>
-                        
-                        <div id="onenight" class="job" vertical layout center wrap>
-                            <div class="overlay" onClick="toggleDialog('onenightdialog')" center 
-                                 center-justified horizontal layout>
-                                <span>More Info</span>
-                                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                            </div>
-                            <span><strong>One Night Tasks</strong></span>
-                            <span>Third place at Microsoft’s “AppHack” Hackathon 2013</span>
-                            <span>Crowdsourced task completion application</span>
-                        </div>
-                        <paper-action-dialog id="onenightdialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                            <div class="jobdescrip" vertical layout center>
-                                <p>
-                                A windows phone app that allows users to post up quick tasks 
-                                for a price. Other users can then complete these tasks and receive
-                                the money described
-                                </p>
-                                <span>Check it out on:</span>
-                                <paper-button>
-                                    <a href="https://github.com/clemon/one_night_tasks_winphone">
-                                        Github
-                                    </a>
-                                </paper-button>
-                            </div>
-                            <paper-button affirmative autofocus>Close</paper-button>
-                        </paper-action-dialog>
-                        
-                        <div><span><br><br></span></div>
-                        
-                        <div id="halloween" class="job" vertical layout center wrap>
-                            <div class="overlay" onClick="toggleDialog('halloweendialog')" center 
-                                 center-justified horizontal layout>
-                                <span>More Info</span>
-                                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                            </div>
-                            <span><strong>Halloween house Scout</strong></span>
-                            <span>First place at Microsoft's Halloween app contest 2013</span>
-                            <span>Crowdsourced trick-or-treating companion app</span>
-                        </div>
-                        <paper-action-dialog id="halloweendialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                            <div class="jobdescrip" vertical layout center>
-                                <p>
-                                A windows Phone 8 app <br>
-                                A new way to Trick-or-Treat! HouseScout serves as your guide on the 
-                                night of the 31st, informing you which houses are participating by 
-                                placing a green or red house pin on a map. Register your own home 
-                                from within the app to let others know if you are giving out candy 
-                                or not. HouseScout will show you a list of houses near your current 
-                                GPS location.
-                                </p>
-                                <span>Check it out on:</span>
-                                <paper-button>
-                                    <a href="https://github.com/clemon/HalloweenHouseScout">
-                                        Github
-                                    </a>
-                                </paper-button>
-                            </div>
-                            <paper-button affirmative autofocus>Close</paper-button>
-                        </paper-action-dialog>
-                        
-                        <div><span><br><br></span></div>
-                        
-                        <div id="mysite" class="job" vertical layout center wrap>
-                            <div class="overlay" onClick="toggleDialog('mysitedialog')" center 
-                                 center-justified horizontal layout>
-                                <span>More Info</span>
-                                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-                            </div>
-                            <span><strong>This Website</strong></span>
-                            <span>Written with Polymer, HTML, and CSS.</span>
-                        </div>
-                        <paper-action-dialog id="mysitedialog" transition="core-transition-center" 
-                                                 backdrop autoCloseDisabled layered="false">
-                            <div class="jobdescrip" vertical layout center>
-                                <p>
-                                A website to showcase my accomplishments, projects, experience and 
-                                what I'm currently working on. It was written with Polymer, HTML and CSS.
-                                </p>
-                                <span>Check it out on:</span>
-                                <paper-button>
-                                    <a href="https://github.com/clemon/clemon.github.io">
-                                        Github
-                                    </a>
-                                </paper-button>
-                            </div>
-                            <paper-button affirmative autofocus>Close</paper-button>
-                        </paper-action-dialog>
-                        
-                        <div vertical layout center>
-                            <span><br><br>Check out my <paper-button>
-                                <a href="https://github.com/clemon">Github</a>
-                            </paper-button></span>
-                        </div>
-                        
-                    </div>
-                </core-collapse>
-            </div>
-            
-            
-            <div class="card" id="interests">
-                <div horizontal layout>
-                    <h1>Interests</h1>
-                    <span flex></span>
-                    <paper-fab id="intfab" icon="add" onclick="interestsRotate()">
-                    </paper-fab>
-                </div>
-                
-                <core-collapse id="intcollapse">
-                    <div class="content">
-                        <span>
-                        When I'm not programming, I like to spend my time hanging out with 
-                        friends, speeding down hills longboarding, jumping around playing 
-                        volleyball or smashing nexuses in League of Legends.
-                        </span>
-                    </div>
-                </core-collapse>
-            </div>
-            
-            <div class="card" id="contact"  >
-                <div horizontal layout>
-                    <h1>Contact Me</h1>
-                    <span flex></span>
-                    <paper-fab id="contactfab" icon="add" onclick="contactRotate()">
-                    </paper-fab>
-                </div>
-                
-                <core-collapse id="contactcollapse">
-                    <div class="content" vertical center layout wrap>
-                        <paper-button><a href="https://www.linkedin.com/in/chetjlemon">LinkedIn</a></paper-button>
-                        <paper-button><a href="https://www.facebook.com/chetlemon">Facebook</a></paper-button>
-                        <paper-button><a href="mailto:chetjlemon@gmail.com">Email</a></paper-button>
-                        
-                    </div>
-                </core-collapse>
-                
-            </div>
-            
-            <div id="invisacard" class="card">
-            <span><br>My name is Chet Lemon, and I am a 20 year old developer 
-            living in San Diego, California. I see my college years as a time to 
-            spread out and get experience in everything I possibly can. Having started in 
-            mobile and recently delved into web, I am looking to broaden my horizons by 
-            introducing myself to Artificial Intelligence and Machine Learning.
-            </span>    
-            </div>
+
+            <p id="introText">
+                I am a 22 year old developer currently looking for a position
+                in the greater Los Angeles area. Having a Bachelor's degree, a
+                diverse set of industry experience and an ever-increasing quiver
+                of personal projects under my belt, it has been a busy past four
+                years. However, the process of learning is never complete.
+            </p>
         </div>
+    </div>
+
+    <div class="centric panel" title="school" style="">
+        <div class="centertext">
+            <h1 id="ucsd">UC San Diego</h1>
+            <h1 id="class">Class of 2016</h1>
+            <h1 id="bs">B.S. Computer Science</h1>
         </div>
-    </core-scroll-header-panel>
-    
-    
-    
-</body>
+    </div>
+
+    <div class="navbar panel briefme" id="exp_panel" title="exp">
+        <div class="centertext" style="margin-top:100px;">
+            <img id="exp_img" src="" style="max-width:300px; max-height:200px"></img>
+            <h1 id="exp_date" class="subtitle"></h1>
+            <p id="exp_text" style="padding-bottom:10px;"></p>
+            <h1 id="exp_skill1" class="subtitle"></h1>
+            <h1 id="exp_skill2" class="subtitle"></h1>
+        </div>
+        <div class="logoBar">
+            <a href="javascript:expLogoBar.logoClick(0);"><img class="active logo"
+                id="bmlogo" src="images/briefmewhite_small.png"></img></a>
+            <a href="javascript:expLogoBar.logoClick(1);"><img class="inactive logo"
+                id="mslogo" src="images/ms_white_small.png"></img></a>
+            <a href="javascript:expLogoBar.logoClick(2);"><img class="inactive logo"
+                id="antlogo" src="images/antengo_small_white.png"></img></a>
+        </div>
+    </div>
+
+    <div class="navbar panel sns" id="proj_panel" title="proj">
+        <div class="centertext" style="margin-top:100px;">
+            <h1 id="proj_title" src="" style="font-size:35pt; padding-bottom:20px;"></h1>
+            <h1 id="proj_date" class="subtitle"></h1>
+            <h1 id="proj_award" class="subtitle"></h1>
+            <p id="proj_text" style="padding-bottom:10px;"></p>
+            <h1 id="proj_skill1" class="subtitle"></h1>
+            <h1 id="proj_skill2" class="subtitle"></h1>
+
+        </div>
+        <div id="snsvideo" class="video0 centertext">
+            <p style="padding-bottom:20px">Featured on Devpost's "Commit" podcast!</p>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/Ed-TrJE5_M8?start=455&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="logoBar">
+            <a href="javascript:projLogoBar.logoClick(0);"><img class="active logo"
+                id="snslogo" src="images/snslogo.png"></img></a>
+            <a href="javascript:projLogoBar.logoClick(1);"><img class="inactive logo"
+                id="overdrivelogo" src="images/overdrivelogo.png"></img></a>
+            <a href="javascript:projLogoBar.logoClick(2);"><img class="inactive logo"
+                id="doormanlogo" src="images/doormanlogo.png"></img></a>
+            <a href="javascript:projLogoBar.logoClick(3);"><img class="inactive logo"
+                id="lynxlogo" src="images/lynxlogo.png"></img></a>
+            <a href="javascript:projLogoBar.logoClick(4);"><img class="inactive logo"
+                id="hslogo" src="images/heart_white.png"></img></a>
+        </div>
+    </div>
+
+    <div class="centric panel snow" id="intr_panel" title="intr">
+        <div style="text-align:left; align-self:center;">
+            <h1 id="like_snow" style="display:inline; visibility:visible;">I like to </h1>
+            <a href="javascript:intrCont.intrClick(0)"><h1 style="display:inline;">Go Snowboarding</h1></a>
+            <h1></h1>
+            <h1 id="like_hike" style="display:inline; visibility:hidden;">I like to </h1>
+            <a href="javascript:intrCont.intrClick(1)"><h1 style="display:inline;">Go Hiking</h1></a>
+            <h1></h1>
+            <h1 id="like_volley" style="display:inline; visibility:hidden;">I like to </h1>
+            <a href="javascript:intrCont.intrClick(2)"><h1 style="display:inline;">Play Volleyball</h1></a>
+            <h1></h1>
+            <h1 id="like_games" style="display:inline; visibility:hidden;">I like to </h1>
+            <a href="javascript:intrCont.intrClick(3)"><h1 style="display:inline;">Play Videogames</h1></a>
+            <h1></h1>
+            <h1 id="like_cook" style="display:inline; visibility:hidden;">I like to </h1>
+            <a href="javascript:intrCont.intrClick(4)"><h1 style="display:inline;">Cook</h1></a>
+            <h1></h1>
+            <h1 id="like_eat" style="display:inline; visibility:hidden;">I like to </h1>
+            <a href="javascript:intrCont.intrClick(5)"><h1 style="display:inline;">Eat</h1></a>
+        </div>
+    </div>
+
+    <div class="panel contact">
+        <h1 style="font-size:40pt; padding: 150px 0 0 150px;">Lets Chat...</h1>
+        <div class="centertext" style="padding-top:200px;">
+            <a class="contacticon" href="mailto:chetjlemon@gmail.com?Subject=I%20made%20it%20to%20the%20bottom%20of%20your%20site"
+                target="_blank"><img src="images/mailicon.png" style="width:50px;"></img></a>
+            <a class="contacticon" href="https://www.facebook.com/chetlemon"
+                target="_blank"><img src="images/fb.png" style="width:50px;"></img></a>
+            <a class="contacticon" href="https://www.instagram.com/artificiallemonflavoring/"
+                target="_blank"><img src="images/igicon.png" style="width:50px;"></img></a>
+            <a class="contacticon" href="https://www.linkedin.com/in/chetjlemon"
+                target="_blank"><img src="images/linkedinicon.png" style="width:50px;"></img></a>
+            <a class="contacticon" href="https://github.com/clemon"
+                target="_blank"><img src="images/githubicon.png" style="width:50px;"></img></a>
+            <a class="contacticon" href="http://devpost.com/clemon"
+                target="_blank"><img src="images/devposticon.png" style="width:50px;"></img></a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var controller = new ScrollMagic.Controller({container: "#scrollContainer"});
+    </script>
+    <script src="js/logobar.js"></script>
+    <script src="js/animate_home.js"></script>
+    <script src="js/animate_exp.js"></script>
+    <script src="js/animate_projs.js"></script>
+    <script src="js/animate_intr.js"></script>
+</div></body>
 </html>
