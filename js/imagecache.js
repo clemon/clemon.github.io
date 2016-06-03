@@ -20,7 +20,10 @@ function preloadImages(array) {
 }
 
 console.log("loading images");
-preloadImages(["images/cook.jpg",
+preloadImages(["images/briefme_titleimg.png",
+                "images/microsoft_titleimg.png",
+                "images/antengo_titleimg.png",
+                "images/cook.jpg",
                 "images/door.jpg",
                 "images/eat.jpg",
                 "images/geisel.jpg",
