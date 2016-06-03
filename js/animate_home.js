@@ -13,10 +13,8 @@ var isEdge = !isIE && !!window.StyleMedia;
 var isChrome = !!window.chrome && !!window.chrome.webstore;
 // Blink engine detection
 var isBlink = (isChrome || isOpera) && !!window.CSS;
+
 // pin title
-
-console.log(isChrome+"  "+isEdge+"  "+isFirefox);
-
 new ScrollMagic.Scene({
     duration: 4000,
     offset: 250
