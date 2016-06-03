@@ -25,7 +25,7 @@ preloadImages(["images/cook.jpg",
                 "images/eat.jpg",
                 "images/geisel.jpg",
                 "images/glass.jpg",
-                "images/hanzo.gif",
+                "images/games.jpg",
                 "images/overdrive.jpg",
                 "images/pops.jpg",
                 "images/rockies.jpg",
@@ -35,6 +35,6 @@ preloadImages(["images/cook.jpg",
                 "images/tentfeet.jpg",
                 "images/usc.jpg",
                 "images/vb.jpg",
-                "images/whoop.gif",
-                "images/zion.gif"]);
+                "images/snow.jpg",
+                "images/hike.jpg"]);
 console.log("done loading images");
