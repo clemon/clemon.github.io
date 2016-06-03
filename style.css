@@ -187,7 +187,8 @@ div[title="school"] {
     background: linear-gradient(
       rgba(40, 40, 40, .70),
       rgba(40, 40, 40, .70)
-    );
+    ),
+    url(images/snow.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -198,7 +199,8 @@ div[title="school"] {
     background: linear-gradient(
       rgba(40, 40, 40, .70),
       rgba(40, 40, 40, .70)
-    );
+    ),
+    url(images/hike.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -221,7 +223,8 @@ div[title="school"] {
     background: linear-gradient(
       rgba(40, 40, 40, .70),
       rgba(40, 40, 40, .70)
-    );
+    ),
+    url(images/games.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

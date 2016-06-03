@@ -1,5 +1,5 @@
 var interests = ["snow", "hike", "volley", "games", "cook", "eat"];
-var hasVid = ["snow", "hike", "games"];
+var hasVid = [];
 var intrCont = new IntrController(interests, hasVid);
 
 function IntrController(interests, hasVid) {
@@ -26,19 +26,4 @@ IntrController.prototype.intrClick = function(clicked) {
     }
 
     this.state = clicked;
-};
-
-document.getElementsByTagName('video')[0].onended = function () {
-  this.load();
-  this.play();
-};
-
-document.getElementsByTagName('video')[1].onended = function () {
-  this.load();
-  this.play();
-};
-
-document.getElementsByTagName('video')[2].onended = function () {
-  this.load();
-  this.play();
 };
