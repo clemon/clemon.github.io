@@ -39,5 +39,6 @@ preloadImages(["images/briefme_titleimg.png",
                 "images/usc.jpg",
                 "images/vb.jpg",
                 "images/snow.jpg",
-                "images/hike.jpg"]);
+                "images/hike.jpg",
+                "images/devpostlogo.png"]);
 console.log("done loading images");
