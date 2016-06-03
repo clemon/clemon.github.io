@@ -1,8 +1,10 @@
 var interests = ["snow", "hike", "volley", "games", "cook", "eat"];
-var intrCont = new IntrController(interests);
+var hasVid = ["snow", "hike", "games"];
+var intrCont = new IntrController(interests, hasVid);
 
-function IntrController(interests) {
+function IntrController(interests, hasVid) {
     this.interests = interests;
+    this.hasVid = hasVid;
     this.state = 0;
 }
 
@@ -13,10 +15,30 @@ IntrController.prototype.intrClick = function(clicked) {
         if (x == clicked) {
             document.getElementById("like_"+this.interests[x]).style.visibility = "visible";
             document.getElementById("intr_panel").className = "centric panel "+this.interests[x];
+            if (this.hasVid.indexOf(this.interests[x]) != -1)
+                document.getElementById(this.interests[x]+"_vid").style.visibility = "visible";
         }
         else {
             document.getElementById("like_"+this.interests[x]).style.visibility = "hidden";
+            if (this.hasVid.indexOf(this.interests[x]) != -1)
+                document.getElementById(this.interests[x]+"_vid").style.visibility = "hidden";
         }
     }
+
     this.state = clicked;
+};
+
+document.getElementsByTagName('video')[0].onended = function () {
+  this.load();
+  this.play();
+};
+
+document.getElementsByTagName('video')[1].onended = function () {
+  this.load();
+  this.play();
+};
+
+document.getElementsByTagName('video')[2].onended = function () {
+  this.load();
+  this.play();
 };

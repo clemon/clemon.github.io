@@ -187,8 +187,7 @@ div[title="school"] {
     background: linear-gradient(
       rgba(40, 40, 40, .70),
       rgba(40, 40, 40, .70)
-    ),
-    url(images/whoop.gif);
+    );
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -199,8 +198,7 @@ div[title="school"] {
     background: linear-gradient(
       rgba(40, 40, 40, .70),
       rgba(40, 40, 40, .70)
-    ),
-    url(images/zion.gif);
+    );
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,8 +221,7 @@ div[title="school"] {
     background: linear-gradient(
       rgba(40, 40, 40, .70),
       rgba(40, 40, 40, .70)
-    ),
-    url(images/hanzo.gif);
+    );
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -305,4 +302,16 @@ div[title="school"] {
 .contacticon {
     display: inline;
     padding: 0 20px 20px 20px;
+}
+
+.vid {
+    position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
 }
