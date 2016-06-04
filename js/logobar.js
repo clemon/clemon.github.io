@@ -1,4 +1,4 @@
-function LogoBar(ids, classes, text, dates, skills, panelName, titles = [], awards=[]) {
+function LogoBar(ids, classes, text, dates, skills, panelName, titles, awards) {
     this.ids = ids;
     this.classes = classes;
     this.text = text;

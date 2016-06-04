@@ -8,4 +8,4 @@ var skillsz = [["Python&nbsp;&nbsp;&nbsp;&nbsp;HTML&nbsp;&nbsp;&nbsp;&nbsp;CSS",
                 ["C#&nbsp;&nbsp;&nbsp;&nbsp;HTML&nbsp;&nbsp;&nbsp;&nbsp;CSS", "JavaScript"],
                 ["C#&nbsp;&nbsp;&nbsp;&nbsp;Windows Phone", "Java&nbsp;&nbsp;&nbsp;&nbsp;Android"]];
 
-var expLogoBar = new LogoBar(idsz, classesz, textz, datesz, skillsz, "exp");
+var expLogoBar = new LogoBar(idsz, classesz, textz, datesz, skillsz, "exp", [], []);
